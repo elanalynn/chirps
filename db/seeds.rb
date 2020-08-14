@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Chirp.create({ text: 'this is the first chirp' })
+Chirp.create({ text: 'this is the second chirp' })

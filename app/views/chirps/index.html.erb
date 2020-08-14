@@ -1,0 +1,6 @@
+<h1>Chirps</h1>
+<ul>
+    <% @chirps.each do |chirp| %>
+      <li><%= chirp.id %> -- <%= chirp.text %></li>
+    <% end %>
+</ul>
