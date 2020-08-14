@@ -26,7 +26,14 @@ class ChirpsController < ApplicationController
     end
   end
 
+  def upvote
+    @chirp = Chirp.find(params[:id])
+    @chirp.votes << Vote.new
+    redirect_to chirps_path
+  end
+
   private
+
   def chirp_params
     params.require(:chirp).permit(:text)
   end

@@ -6,7 +6,7 @@
 - [x] Allow visitors to view existing chirps list Chirps list should display to users newest-at-top.
 - [x] Chirps must be CAPS ONLY.
 - [x] After persisting to the database, use an external API to send push notifications to phones; Implement this by using our HTTP service
-- [ ] Allow visitors to upvote chirps
+- [x] Allow visitors to upvote chirps
 
 ## Nice to Haves
 
