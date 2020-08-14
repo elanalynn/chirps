@@ -4,7 +4,7 @@
     <% @chirps.reverse.each do |chirp| %>
       <li>
         <span>
-          <%= chirp.id %> -- <%= chirp.text.upcase %>
+          <%= chirp[:id] %> -- <%= chirp[:text].to_s.upcase %>
         </span>
         <span>
           <%= chirp.votes.count %>

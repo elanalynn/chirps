@@ -13,10 +13,10 @@ class ChirpsController < ApplicationController
 
   def create
     @chirp = Chirp.new(chirp_params)
-    @chirp.save_chirp
-
+    
     respond_to do |format|
       if @chirp.save
+        @chirp.save_chirp
         format.html { redirect_to @chirp, notice: 'Chirp was successfully created.' }
         format.json { render :show, status: :created, location: @chirp }
       else

@@ -6,7 +6,19 @@ class ChirpsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
+    @chirps = Array.new
+    @chirps << @chirp
     get chirps_url
+    assert_response :success
+  end
+
+  test "should get new" do
+    get new_chirp_url
+    assert_response :success
+  end
+
+  test "should get show" do
+    get chirp_url(@chirp)
     assert_response :success
   end
 end
