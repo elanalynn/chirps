@@ -2,4 +2,31 @@ class ChirpsController < ApplicationController
   def index
     @chirps = Chirp.all
   end
+
+  def show
+    @chirp = Chirp.find(params[:id])
+  end
+
+  def new
+    @chirp = Chirp.new
+  end
+
+  def create
+    @chirp = Chirp.new(chirp_params)
+
+    respond_to do |format|
+      if @chirp.save
+        format.html { redirect_to @chirp, notice: 'Chirp was successfully created.' }
+        format.json { render :show, status: :created, location: @chirp }
+      else
+        format.html { render :new }
+        format.json { render json: @chirp.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  private
+  def chirp_params
+    params.require(:chirp).permit(:text)
+  end
 end
