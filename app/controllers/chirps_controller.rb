@@ -13,6 +13,7 @@ class ChirpsController < ApplicationController
 
   def create
     @chirp = Chirp.new(chirp_params)
+    @chirp.save_chirp
 
     respond_to do |format|
       if @chirp.save
