@@ -12,6 +12,7 @@
 
 - [x] Project code pushed to an online service like GitHub so team members can browse through it during the presentation
 - [ ] The app preferably uses AJAX for creating new chirps, viewing chirps, listing chirps
-- [ ] Well styled application with good usability and design Write tests for the application
+- [x] Well styled application with good usability and design
+- [ ] Write tests for the application
 - [ ] Order list of chirps by a reddit-like algorithm that takes into account both recency and number of upvotes
 - [ ] Allow users to unvote chirps they've previously upvoted

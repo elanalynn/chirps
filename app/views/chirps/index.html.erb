@@ -1,16 +1,18 @@
-<h1>Chirps</h1>
-<ul>
+<section class="chirps">
+  <h1>Chirps</h1>
+  <ul>
     <% @chirps.reverse.each do |chirp| %>
       <li>
-      <span>
-        <%= chirp.id %> -- <%= chirp.text.upcase %>
-      </span>
-      <span>
-        <%= chirp.votes.count %>
-      </span>
-      <span>
-        <%= link_to "**UPVOTE**", "/chirps/#{chirp[:id]}/upvote", method: :post %>
-      </span>
+        <span>
+          <%= chirp.id %> -- <%= chirp.text.upcase %>
+        </span>
+        <span>
+          <%= chirp.votes.count %>
+        </span>
+        <span>
+          <%= link_to raw("&#8593;"), "/chirps/#{chirp[:id]}/upvote", method: :post %>
+        </span>
       </li>
     <% end %>
-</ul>
+  </ul>
+</section>

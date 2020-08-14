@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: lightgray;
+}
+
+.nav-bar {
+  background-color: #222;
+  color: #fff;
+  padding: 0.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
